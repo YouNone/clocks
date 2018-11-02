@@ -1,0 +1,10 @@
+<div class="row">
+    <div class="col-xs-5">
+        <h1>Current Time: {{timeNow | timeFormat}}</h1>
+        <div>
+            <button type="button" (click)="toggleTime()">Start/Stop Timer</button>
+            <button type="button" (click)="onReset()">Reset Timer</button>
+            <button type="button" (click)="onPause()">Pause Timer</button>
+        </div>
+    </div>
+</div>
