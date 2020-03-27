@@ -1,6 +1,6 @@
-// формате чч.мм.сс
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Observable, Subscription } from 'rxjs/Rx';
+import { Observable, Subscription } from 'rxjs';
+
 
 @Component({
 	selector: 'my-app',
@@ -20,7 +20,7 @@ export class AppComponent implements OnInit, OnDestroy {
 	// 	var min = Math.floor((num - (hrs * 3600)) / 60);
 	// 	var sec = num - (hrs * 3600) - (min * 60);
 	// 	sec = Math.floor(sec * 100) / 100
-	   
+
 	// 	var result = (hrs < 10 ? "0" + hrs : hrs);
 	// 	result += ":" + (min < 10 ? "0" + min : min);
 	// 	result += ":" + (sec < 10 ? "0" + sec : sec);
@@ -29,13 +29,13 @@ export class AppComponent implements OnInit, OnDestroy {
 
 	// Timer subscription, flag check 
 	ngOnInit() {
-		this.subs$ = this.timer.subscribe( () => {
+		this.subs$ = this.timer.subscribe(() => {
 			if (this.isActive) {
-				this.timeNow++;				
+				this.timeNow++;
 			}
 		});
 	}
-	
+
 
 	// Start/Stop button, switch flag to opposite state
 	toggleTime() {
